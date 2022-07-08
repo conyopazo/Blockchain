@@ -19,6 +19,7 @@ nonce_winner = ''
 hash_winner = ''
 ganador = ''
 termine = False
+cant_bloques = 3
 #Creamos variable para bloquear
 flag = False
 #Generamos lista con posibles nodos
@@ -156,7 +157,7 @@ def main():
     inicial_block = proof_of_work(primero,prefix_zeros)
     append_block(inicial_block[0])
     print(chain)
-    for j in range(3):
+    for j in range(cant_bloques):
         #Modfico variables
         flag = False
         transactions = transactions_list()
